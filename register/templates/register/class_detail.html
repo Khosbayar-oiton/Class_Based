@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Detail</title>
+</head>
+<body>
+    <h1>Class Detail</h1>
+    
+    <p><strong>Class Name:</strong> {{ class_instance.class_Name }}</p>
+    <p><strong>Teacher Name:</strong> {{ class_instance.teacher_Name }}</p>
+
+    <a href="{% url 'class_list' %}">Back to Class List</a>
+</body>
+</html>

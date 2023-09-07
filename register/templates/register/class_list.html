@@ -1,0 +1,12 @@
+{% extends 'register/base.html' %}
+
+
+{% block content %}
+        {% for class_instance in classes %}
+        <ul><li><div class="class-container"> <a href="{% url 'class_detail' pk=class_instance.pk %}">{{ class_instance.class_Name }}</a> 
+            (Teacher: {{ class_instance.teacher_Name }})</div></li></ul>
+        {% empty %}
+        <li>No classes available.</li>
+        {% endfor %}
+{% endblock %}
+

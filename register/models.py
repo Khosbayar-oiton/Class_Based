@@ -1,17 +1,18 @@
+# app_name/models.py
 from django.db import models
-from django.conf import settings
-from django.utils import timezone
 
+class Class(models.Model):
+    class_Name = models.CharField(max_length=50)
+    teacher_Name = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.class_Name
 
 class Student(models.Model):
+    stud_Class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    stud_Name = models.CharField(max_length=50)
+    stud_Age = models.IntegerField()
+    stud_Email = models.EmailField()
 
-    studID = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    studName = models.CharField(max_length=50)
-    studAge = models.IntegerField()
-    studEmail = models.CharField(max_length=50)
-    
-class Class(models.Model):
-    classID = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    className = models.CharField(max_length=50)
-    kidQuantity = models.IntegerField()
+    def __str__(self):
+        return self.stud_Name

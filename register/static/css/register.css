@@ -1,0 +1,29 @@
+.class-container 
+{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: wrap-content;
+    height: wrap-content;
+    text-align: center;
+    background-color: #D6EEEE;
+    border-radius: 25px;
+    list-style-type: none;
+}
+
+.page-header {
+    background-color: #05fffb;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+    text-decoration: none;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
