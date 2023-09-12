@@ -1,0 +1,14 @@
+{% extends 'register/base.html' %} {% block content %}
+
+<p>Are you sure you want to delete the following class?</p>
+
+<p><strong>Class Name:</strong> {{ class_instance.class_Name }}</p>
+<p><strong>Teacher Name:</strong> {{ class_instance.teacher_Name }}</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Delete</button>
+</form>
+
+<a href="{% url 'class_list' %}">Cancel</a>
+{% endblock %}

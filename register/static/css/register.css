@@ -1,29 +1,95 @@
-.class-container 
-{
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    width: wrap-content;
-    height: wrap-content;
-    text-align: center;
-    background-color: #D6EEEE;
+.class-container {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: wrap-content;
+  height: fit-content;
+  text-align: center;
+  background-color: #d6eeee;
+  border-radius: 25px;
+}
+.students-container {
+    border: 2px solid black;
+    padding:10px;
+    margin:10px;
+    height:fit-content;
+    width:fit-content;
     border-radius: 25px;
-    list-style-type: none;
+    background-color: #d6eeee;
+    display: flex;
+    padding-right: 20px;
+}
+
+.student{
+    margin-left: 10px;
+    float:right;
+    text-decoration: solid;
+}
+
+.student a {
+   color:black;
+}
+a {
+    text-decoration: none;
+}
+
+.student-detail-container {
+  border: 1px solid black;
+  margin:10px;
+  padding:10px;
+  width: fit-content;
+  background-color: #d6eeee;
+  border-radius: 25px;
+}
+ul {
+  list-style: none;
+}
+.class-detail-container {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #d6eeee;
 }
 
 .page-header {
-    background-color: #05fffb;
-    margin-top: 0;
-    margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
-    text-decoration: none;
+  background-color: #05fffb;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 20px 20px 20px 40px;
+  text-decoration: none;
 }
 
 .page-header h1,
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+  color: #ffffff;
+  font-size: 36pt;
+  text-decoration: none;
+}
+
+.student-list-header {
+  display: flex;
+  align-items: center;
+}
+
+.student-list-header h2 {
+  margin-right: 10px;
+}
+
+.add-student {
+  display: flex;
+}
+
+.add-student h2 {
+  margin-right: 15px;
+}
+
+.container-head {
+  display: flex;
+  align-items: center;
+}
+
+.container-head h1 {
+  margin-right: 10px;
 }

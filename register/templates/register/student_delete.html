@@ -1,0 +1,14 @@
+{% extends 'register/base.html' %} {% block content %}
+
+<p>Are you sure you want to delete the following class?</p>
+
+<p><strong>Student Name:</strong> {{ student.stud_Name }}</p>
+<p><strong>Student Class:</strong> {{ student.stud_Class }}</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Delete</button>
+</form>
+
+<a href="{% url 'class_detail' %}">Cancel</a>
+{% endblock %}

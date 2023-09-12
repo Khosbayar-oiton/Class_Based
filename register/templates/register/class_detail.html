@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Class Detail</title>
-</head>
-<body>
-    <h1>Class Detail</h1>
-    
-    <p><strong>Class Name:</strong> {{ class_instance.class_Name }}</p>
-    <p><strong>Teacher Name:</strong> {{ class_instance.teacher_Name }}</p>
-
-    <a href="{% url 'class_list' %}">Back to Class List</a>
-</body>
-</html>
+{% extends 'register/base.html' %}
+ {% block content %}
+<div class="class-detail-container">
+  <p><strong>Class Name:</strong> {{ class_instance.class_Name }}</p>
+  <p><strong>Teacher Name:</strong> {{ class_instance.teacher_Name }}</p>
+  <a href="{% url 'class_list' %}">Back to Class List</a>
+</div>
+<div class="add-student">
+  <h2>Students</h2>
+  <a href="{% url 'student_new' %}">
+    {% include './icons/user-add-svgrepo-com.svg' %}
+  </a>
+</div>
+{% for student in students %}
+<div class="students-container">
+  
+      <div class="student"><a href="{% url 'student_detail' pk=student.pk %}">{{ student.stud_Name }}</a></div>
+      <div class="student"><a href="{% url 'student_edit' pk=student.pk %}"> {% include './icons/edit-3-svgrepo-com.svg' %}</div>
+      <div class="student"><a href="{% url 'student_delete' pk=student.pk %}"> {% include './icons/delete-2-svgrepo-com.svg' %}</div>
+ 
+</div>
+{% empty %}
+<li>No students available.</li>
+{% endfor %} {% endblock %}

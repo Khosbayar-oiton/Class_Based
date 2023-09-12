@@ -1,0 +1,12 @@
+{% extends 'register/base.html' %}
+
+{% block content %}
+<div class="student-detail-container">
+           
+        <p><strong>Student Class:</strong> {{ student_instance.stud_Class }}</p>
+        <p><strong>Student Name:</strong> {{ student_instance.stud_Name }}</p>
+        <p><strong>Student Age:</strong> {{ student_instance.stud_Age }}</p>
+        <p><strong>Student Email:</strong> {{ student_instance.stud_Email }}</p>
+        <a href="{% url 'class_list' %}">Back to Class List</a>         
+</div>
+{% endblock %}

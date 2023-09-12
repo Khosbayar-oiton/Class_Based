@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{% static 'css/register.css' %}">
 </head>
 <header class="page-header">
-    <div class="container">
+    <div class="container-head">
+        <h1><a href="{% url 'class_list' %}">Student Management</a></h1>
 
         {% if user.is_authenticated %}
         <a href="{% url 'class_new' %}" class="top-menu">
@@ -16,7 +17,7 @@
         </a>
         {% endif %}
 
-        <h1><a href="{% url 'class_list' %}">Student Management</a></h1>
+        
     </div>
   </header>
   <body>

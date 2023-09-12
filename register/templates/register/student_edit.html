@@ -1,5 +1,5 @@
 {% extends 'register/base.html' %} {% block content %}
-<form method="POST" class="class-form">
+<form method="POST" class="student-form">
   {% csrf_token %} {{ form.as_p }}
   <button type="submit" class="save btn btn-secondary">Save</button>
 </form>
